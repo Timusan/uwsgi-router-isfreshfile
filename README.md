@@ -2,7 +2,7 @@
 Gives you an extra router condition by which you can check if a given file is to be considered "fresh" or if it is outdated.
 The check is done against the file's last modified timestamp.
 
-# Usage
+## Usage
 ```ini
 route-if = isfreshfile:<path-to-file>,<age> other-action:...
 ```
