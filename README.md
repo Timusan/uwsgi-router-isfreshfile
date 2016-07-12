@@ -1,10 +1,15 @@
-# WARNING: File age is currently hard coded at 10 seconds, not ready for production just yet.
-
 # uwsgi-router-isfreshfile
 Gives you an extra router condition by which you can check if a given file is to be considered "fresh" or if it is outdated.
 The check is done against the file's last modified timestamp.
 
-# Flat file caching with expiration
+# Usage
+```ini
+route-if = isfreshfile:<path-to-file>,<age> other-action:...
+```
+
+You need to include the path to the full file you wish to check for freshness and provide the maximum allowed age in seconds.
+
+## Flat file caching with expiration
 
 This plugin is part of a set of tiny plugins which aims to give the user flat file caching with sane directory structure and file expiration.
 
